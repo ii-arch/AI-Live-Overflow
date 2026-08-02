@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ClawdPet" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#E6916A</item>
+        <item name="colorPrimaryDark">#C97A55</item>
+        <item name="colorAccent">#E6916A</item>
+        <item name="android:windowBackground">#FFF7F2</item>
+    </style>
+</resources>
