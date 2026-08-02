@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 简化版 Clawd 小螃蟹 -->
+    <path
+        android:fillColor="#E6916A"
+        android:pathData="M34,44 h40 v12 h-40 z" />
+    <path
+        android:fillColor="#E6916A"
+        android:pathData="M40,56 h28 v8 h-28 z" />
+    <path
+        android:fillColor="#E6916A"
+        android:pathData="M22,50 h12 v8 h-12 z" />
+    <path
+        android:fillColor="#E6916A"
+        android:pathData="M74,50 h12 v8 h-12 z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M42,48 h6 v6 h-6 z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M60,48 h6 v6 h-6 z" />
+    <path
+        android:fillColor="#E6916A"
+        android:pathData="M38,64 h6 v8 h-6 z M46,64 h6 v8 h-6 z M56,64 h6 v8 h-6 z M64,64 h6 v8 h-6 z" />
+</vector>

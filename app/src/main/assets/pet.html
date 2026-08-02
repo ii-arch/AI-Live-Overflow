@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Clawd</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;background:transparent;overflow:hidden;}
+#wrap{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;height:100%;}
+svg{width:100%;height:100%;image-rendering:pixelated;display:block;}
+#bubble{position:absolute;top:6%;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.93);color:#333;font-size:12px;padding:4px 9px;border-radius:9px;white-space:nowrap;opacity:0;transition:opacity .3s;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="bubble">咔咔！</div>
+  <svg id="pet" viewBox="0 0 16 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="4" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="5" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="6" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="7" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="8" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="9" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="10" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="11" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="12" y="10" width="1" height="2" fill="#e6916a"/>
+    <rect x="2" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="3" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="4" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="6" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="7" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="8" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="9" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="11" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="12" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="13" y="12" width="1" height="2" fill="#e6916a"/>
+    <rect x="3" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="4" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="5" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="6" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="7" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="8" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="9" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="10" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="11" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="12" y="14" width="1" height="2" fill="#e6916a"/>
+    <rect x="4" y="16" width="1" height="2" fill="#e6916a"/>
+    <rect x="6" y="16" width="1" height="2" fill="#e6916a"/>
+    <rect x="9" y="16" width="1" height="2" fill="#e6916a"/>
+    <rect x="11" y="16" width="1" height="2" fill="#e6916a"/>
+  </svg>
+</div>
+<script>
+const pet=document.getElementById('pet');
+const bubble=document.getElementById('bubble');
+let t=0;
+(function loop(){
+  t+=0.06;
+  pet.style.transform=`translateY(${Math.sin(t)*1.8}px) rotate(${Math.sin(t*0.6)*1.2}deg)`;
+  requestAnimationFrame(loop);
+})();
+pet.addEventListener('click',()=>{
+  pet.style.transition='transform .12s';
+  pet.style.transform='translateY(-10%)';
+  bubble.style.opacity=1;
+  setTimeout(()=>{pet.style.transition='';bubble.style.opacity=0;},400);
+});
+</script>
+</body>
+</html>
